@@ -12,7 +12,8 @@ public class Transaksi extends Barang implements TotalBayar{
     private String kodeBarang;
 
 
-    public Transaksi(Integer noFaktur, String namaPelanggan, String noHp, String alamat, String kodeBarang, String namaBarang, double hargaBarang, int jumlahBarang, String kasir) {
+    public Transaksi(Integer noFaktur, String namaPelanggan, String noHp, String alamat, String kodeBarang, String namaBarang,
+    double hargaBarang, int jumlahBarang, String kasir) {
         super(namaBarang, hargaBarang);
         this.noFaktur = noFaktur;
         this.namaPelanggan = namaPelanggan;

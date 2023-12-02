@@ -9,14 +9,16 @@ public class Transaksi extends Barang implements TotalBayar{
     private String noHp;
     private String alamat;
     private String kasir;
+    private String kodeBarang;
 
 
-    public Transaksi(Integer noFaktur, String namaPelanggan, String noHp, String alamat, String namaBarang, double hargaBarang, int jumlahBarang, String kasir) {
+    public Transaksi(Integer noFaktur, String namaPelanggan, String noHp, String alamat, String kodeBarang, String namaBarang, double hargaBarang, int jumlahBarang, String kasir) {
         super(namaBarang, hargaBarang);
         this.noFaktur = noFaktur;
         this.namaPelanggan = namaPelanggan;
         this.noHp = noHp;
         this.alamat = alamat;
+        this.kodeBarang = kodeBarang;
         this.jumlahBarang = jumlahBarang;
         this.kasir = kasir;
     }
@@ -50,7 +52,8 @@ public class Transaksi extends Barang implements TotalBayar{
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++");
 
         System.out.println(b.toUpperCase());
-         System.out.println("-----------------------------------------------");
+        System.out.println("-----------------------------------------------");
+        System.out.println("Kode Barang\t: " + kodeBarang);
         System.out.println("Nama Barang\t: " + getNamaBarang().toUpperCase());
         System.out.println("Harga Barang\t: " + getHargaBarang());
         System.out.println("Jumlah Barang\t: " + jumlahBarang);

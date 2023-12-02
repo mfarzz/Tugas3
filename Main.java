@@ -1,6 +1,5 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 public class Main {
     private static int lastFakturNumber = 0;
     public static void main(String[] args) {
@@ -23,6 +22,9 @@ public class Main {
             System.out.print("Alamat\t\t: ");
             String alamat = scanner.next();
 
+            System.out.print("Kode Barang\t: ");
+            String kode = scanner.next();
+
             System.out.print("Nama Barang\t: ");
             String namaBarang = scanner.next();
 
@@ -35,7 +37,7 @@ public class Main {
                     inputHargaValid = true;
                 } catch (InputMismatchException e) {
                     System.out.println("Error: Input harga barang tidak valid. Silakan coba lagi.");
-                    scanner.next(); 
+                    scanner.next();
                 }
             }
 
@@ -60,7 +62,7 @@ public class Main {
             System.out.print("Kasir\t\t: ");
             String kasir = scanner.next();
 
-            Transaksi transaksi = new Transaksi(noFaktur, namaPelanggan, noHp, alamat, namaBarang, hargaBarang, jumlahBarang, kasir);
+            Transaksi transaksi = new Transaksi(noFaktur, namaPelanggan, noHp, alamat, kode, namaBarang, hargaBarang, jumlahBarang, kasir);
             System.out.println();
             transaksi.tampilkanDetailTransaksi();
 
